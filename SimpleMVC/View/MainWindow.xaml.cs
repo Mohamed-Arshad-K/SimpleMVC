@@ -25,7 +25,9 @@ namespace SimpleMVC
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NameController controller = new NameController();
-            controller.DisplayFullName(fName, sName);    
+            ///Data from View Sent to Controller
+            controller.DisplayFullName(fName.Text, sName.Text);
+            controller.Close(this);
         }
     }
 }
