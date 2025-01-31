@@ -17,12 +17,12 @@
 
                 <WrapPanel VerticalAlignment="Center" >
                     <TextBlock Text="First name: " VerticalAlignment="Center" Margin="15,0,0,0"/>
-                    <TextBox x:Name="fName" Margin="10,0,0,0" Height="25" Width="200" TextChanged="fName_TextChanged" />
+                    <TextBox x:Name="fName" Margin="10,0,0,0" Height="25" Width="200"/>
                 </WrapPanel>
 
                 <WrapPanel VerticalAlignment="Center" Grid.Row="1" >
                     <TextBlock Text="Second name: " VerticalAlignment="Center" Margin="15,0,0,0"/>
-                    <TextBox x:Name="sName" Margin="10,0,0,0" Height="25" Width="200" TextChanged="sName_TextChanged" />
+                    <TextBox x:Name="sName" Margin="10,0,0,0" Height="25" Width="200" />
                 </WrapPanel>
 
                 <Button Content="OK" Grid.Row="3" Height="25" Width="100" HorizontalAlignment="Right" Margin="0,0,10,0" Click="Button_Click"/>

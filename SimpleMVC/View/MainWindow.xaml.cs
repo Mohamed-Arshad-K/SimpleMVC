@@ -17,16 +17,26 @@ namespace SimpleMVC
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        NameController _controller = null;
+
         public MainWindow()
         {
             InitializeComponent();
+            _controller = new NameController(); 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NameController controller = new NameController();
+
             ///Data from View Sent to Controller
-            controller.DisplayFullName(fName.Text, sName.Text);
+            ///Inside the controller data is sent to Model
+            controller.SetFullName(fName.Text, sName.Text);
+
+            ///View Query the Controller for the Model
+            controller.Display();
+
             controller.Close(this);
         }
     }

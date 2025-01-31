@@ -12,20 +12,23 @@ namespace SimpleMVC.Controller
 {
     public class NameController
     {
-        public void DisplayFullName(string fNameTextBox, string sNameTextBox)
-        {
-            ///Data from Controller Sent to Model
-            NameModel _model= new NameModel();
-            _model.FirstName= fNameTextBox;
-            _model.SecondName = sNameTextBox;
+        private NameModel _model = null;
 
-            ///Data from Model Sent to View 
-            Display(_model);    
+        public NameController()
+        {
+            _model= new NameModel();
         }
 
-        private void Display(NameModel model)
+        public void SetFullName(string fNameTextBox, string sNameTextBox)
         {
-            MessageBox.Show($"{model.FirstName} {model.SecondName}");
+            ///Data from Controller Sent to Model
+            _model.FirstName= fNameTextBox;
+            _model.SecondName = sNameTextBox;
+        }
+
+        public void Display()
+        {
+            MessageBox.Show($"{_model.FirstName} {_model.SecondName}");
         }
 
         public void Close(Window window)
