@@ -18,6 +18,7 @@ Depends on the POV (Point of View) the data flow in the MVC will differ. The abo
 data flow is for WPF or Desktop application in which the view acts a primary user action.
 
 ## Pictorial Representation of MVC Design Patter
+![image](https://github.com/user-attachments/assets/29a04e0d-4410-472f-ab8e-047c0916f97a)
 
 
 
